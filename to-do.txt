@@ -1,0 +1,31 @@
+Space Invaders - Main Coder: Ziyan Lin 
+Co-Coder: Dhruba Roy
+
+Objective: Create full working game(simple version at first then intricacies after)
+
+
+
+1) Create classes for main character, enemies, bullets, ship types and upgrades.
+2) Have a method that starts up an array zone to set up the field for play
+3) Make sure eveything positions and spawns correctly.
+4) Code for user input
+5) Have a main method that starts up the game and is able to go from start to finish.
+
+
+
+
+
+
+Go Fish - Main Coder: Dhruba Roy
+
+          Co-Coder: Ziyan Lin
+
+Objective: Create full game (have random AI at first and then code for a smarter one).
+
+
+
+1)Have a set of arrays which simulates Cards
+2)Method that simulates deckf ull of randomized cards.
+3) Two sides get dealt 7 cards, one side requires user input other is computer controlled.
+4) Implement gamne winning main method where the player with the most sets of 4 wins.
+5) Possibly implement more players. 
