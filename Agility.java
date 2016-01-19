@@ -10,7 +10,11 @@ public class Damage extends Ship{
            ammo = 0;
     }
     public String toString(){
+<<<<<<< HEAD
         return "]}" + HP + "=" + gun;
+=======
+        return "~" + HP + "}" + gun;
+>>>>>>> 3df26f73c932527eb1fd0500cb0a158e0cf1978b
     }
     public void setMove(String a){
         if(a = "w"){
