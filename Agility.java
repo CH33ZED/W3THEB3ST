@@ -9,7 +9,7 @@ public class Tank extends Ship{
            hit = false;
     }
     public String toString(){
-        return "[}" + HP + "}]" + gun;
+        return "~" + HP + "}" + gun;
     }
     public void setMove(String a){
         if(a = "w"){
