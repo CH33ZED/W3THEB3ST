@@ -1,4 +1,13 @@
-public class tank extends Ship{
+public class Tank extends Ship{
+    public Tank(){
+           r = 4;
+           c = o;
+           HP = 6;
+           gun = ">";
+           name = "Tank";
+           nuke = false;
+           hit = false;
+    }
     public String toString(){
         return "[}" + HP + "}]" + gun;
     }
@@ -15,11 +24,11 @@ public class tank extends Ship{
     }
     public void fire(){
         if (gun.equals(")="){
-	      bullet a = bullet(r,c+1);
+	      bullet a = bullet(r,c+1,2);
 	}
 	else{
 	    if(ammo % 3 == 0){
-	      bullet a = bullet(r,c+1);
+	      bullet a = bullet(r,c+1,2);
             }
         }     	  
     }
@@ -33,5 +42,12 @@ public class tank extends Ship{
         HP = a;
     }  
     public special(){
-    }                                    
+        if(kc >= 10){
+               this.setHP(kc/10);
+               kc %= 10;
+        }
+    }
+    public die(){
+         name = "&&&";
+    }                         
 }
