@@ -8,6 +8,7 @@ public class Damage extends Ship{
            nuke = false;
            hit = false;
            ammo = 0;
+           kc = 0;
     }
     public String toString(){
         return "]}" + HP + "=" + gun;

@@ -7,6 +7,7 @@ public class Tank extends Ship{
            name = "Tank";
            nuke = false;
            hit = false;
+           kc = 0;
     }
     public String toString(){
         return "[}" + HP + "}]" + gun;
