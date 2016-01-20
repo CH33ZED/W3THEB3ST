@@ -1,7 +1,7 @@
 public class Damage extends Ship{
     public Damage(){
-           r = 4;
-           c = o;
+	   r = 4;
+           c = 0;
            HP = 3;
            gun = "(C";
            name = "Damage";
@@ -9,6 +9,7 @@ public class Damage extends Ship{
            hit = false;
            ammo = 0;
            kc = 0;
+           dead = false;
     }
     public String toString(){
         return "]}" + HP + "=" + gun;
@@ -35,22 +36,23 @@ public class Damage extends Ship{
         }
 	ammo++;     	  
     }
-    public upgrade(int a){
+    public void upgrade(int a){
         setHP(HP + a);
     }
-    public setGun(String a){
+    public void setGun(String a){
         gun = a;
     }
-    public setHP(int a){
+    public void setHP(int a){
         HP = a;
     }  
-    public special(){
+    public void special(){
         if(kc >= 10){
                nuke = true;
                kc -= 10;
         }
     }
-    public die(){
+    public void die(){
          name = "&&&";
+         dead = true;
     }                         
 }

@@ -1,13 +1,14 @@
 public class Tank extends Ship{
     public Tank(){
            r = 4;
-           c = o;
+           c = 0;
            HP = 6;
            gun = ">";
            name = "Tank";
            nuke = false;
            hit = false;
            kc = 0;
+           dead = false;
     }
     public String toString(){
         return "[}" + HP + "}]" + gun;
@@ -33,22 +34,23 @@ public class Tank extends Ship{
             }
         }     	  
     }
-    public upgrade(int a){
+    public void upgrade(int a){
         setHP(HP + a);
     }
-    public setGun(String a){
+    public void setGun(String a){
         gun = a;
     }
-    public setHP(int a){
+    public void setHP(int a){
         HP = a;
     }  
-    public special(){
+    public void special(){
         if(kc >= 10){
                this.setHP(kc/10);
                kc %= 10;
         }
     }
-    public die(){
+    public void die(){
          name = "&&&";
+         dead = true;
     }                         
 }

@@ -1,13 +1,14 @@
 public class Agility extends Ship{
     public Agility(){
            r = 4;
-           c = o;
+           c = 0;
            HP = 2;
            gun = "-";
            name = "Agility";
            nuke = false;
            hit = false;
            kc = 0;
+           dead = false;
     }
     public String toString(){
         return "~" + HP + "}" + gun;
@@ -31,21 +32,22 @@ public class Agility extends Ship{
 	      bullet a = bullet(r,c+1, 1);
         }     	  
     }
-    public upgrade(int a){
+    public void upgrade(int a){
         setHP(HP + a);
     }
-    public setGun(String a){
+    public void setGun(String a){
         gun = a;
     }
-    public setHP(int a){
+    public void setHP(int a){
         HP = a;
     }  
-    public special(){
+    public void special(){
         if(((int)(Math.random()*2))== 0){
                hit = false;
         }
     }
-    public die(){
+    public void die(){
          name = "&&&";
+         dead = true;
     }                         
 }

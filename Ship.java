@@ -7,7 +7,8 @@ public abstract class Ship{
     public boolean nuke;
     public boolean hit;
     public int kc;
-    public abstract void move(String a);
+    public boolean dead;
+    public abstract void setMove(String a);
     public abstract void fire();
     public abstract void upgrade(int a);  
     public abstract void setGun(String a);
