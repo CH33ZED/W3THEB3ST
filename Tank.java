@@ -18,6 +18,7 @@ public class Tank extends Ship{
             if(r > 0){
                 r--;
             }
+        }
 	else{
             if(r < 9){
                 r++;
