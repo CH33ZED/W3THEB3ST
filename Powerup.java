@@ -1,7 +1,7 @@
 public class Powerup extends Ship{
     public Powerup(){
 	   r = (int)(math.random() * 10);
-           c = 20;
+           c = 9;
            HP = 1;
            gun = "";
            name = "Powerup";

@@ -12,10 +12,10 @@ public class Damage extends Ship{
            dead = false;
     }
     public String toString(){
-        return "]}" + HP + "=" + gun;
+        return "]}" + HP + gun;
     }
     public void setMove(String a){
-        if(a = "w"){
+        if(a.equals("w")){
             if(r > 0){
                 r--;
             }
@@ -27,6 +27,7 @@ public class Damage extends Ship{
         }
     }
     public void fire(){
+	/*
         if (gun.equals(")="){
 	      bullet a = bullet(r,c+1,4);
 	}
@@ -35,7 +36,8 @@ public class Damage extends Ship{
 	      bullet a = bullet(r,c+1,2);
             }
         }
-	ammo++;     	  
+	ammo++;
+        */     	  
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -45,6 +47,9 @@ public class Damage extends Ship{
     }
     public void setHP(int a){
         HP = a;
+        if (HP >= 10){
+            HP = 9;
+        }
     }  
     public void special(){
         if(kc >= 10){

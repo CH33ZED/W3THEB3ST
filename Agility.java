@@ -3,7 +3,7 @@ public class Agility extends Ship{
            r = 4;
            c = 0;
            HP = 2;
-           gun = "-";
+           gun = "--";
            name = "Agility";
            nuke = false;
            hit = false;
@@ -14,7 +14,7 @@ public class Agility extends Ship{
         return "~" + HP + "}" + gun;
     }
     public void setMove(String a){
-        if(a = "w"){
+        if(a.equals("w")){
             if(r > 0){
                 r--;
             }
@@ -26,12 +26,14 @@ public class Agility extends Ship{
         }
     }
     public void fire(){
+        /*
         if (gun.equals(")="){
 	      bullet a = bullet(r,c+1,2);
 	}
 	else{
 	      bullet a = bullet(r,c+1, 1);
         }     	  
+        */
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -41,6 +43,9 @@ public class Agility extends Ship{
     }
     public void setHP(int a){
         HP = a;
+        if (HP >= 10){
+            HP = 9;
+        }
     }  
     public void special(){
         if(((int)(Math.random()*2))== 0){

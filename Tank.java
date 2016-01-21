@@ -3,7 +3,7 @@ public class Tank extends Ship{
            r = 4;
            c = 0;
            HP = 6;
-           gun = ">";
+           gun = ">[";
            name = "Tank";
            nuke = false;
            hit = false;
@@ -11,10 +11,10 @@ public class Tank extends Ship{
            dead = false;
     }
     public String toString(){
-        return "[}" + HP + "}]" + gun;
+        return "}" + HP + "]" + gun;
     }
     public void setMove(String a){
-        if(a = "w"){
+        if(a.equals("w")){
             if(r > 0){
                 r--;
             }
@@ -26,6 +26,7 @@ public class Tank extends Ship{
         }
     }
     public void fire(){
+        /*
         if (gun.equals(")="){
 	      bullet a = bullet(r,c+1,2);
 	}
@@ -33,7 +34,8 @@ public class Tank extends Ship{
 	    if(ammo % 3 == 0){
 	      bullet a = bullet(r,c+1,2);
             }
-        }     	  
+        }
+        */     	  
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -43,6 +45,9 @@ public class Tank extends Ship{
     }
     public void setHP(int a){
         HP = a;
+        if (HP >= 10){
+            HP = 9;
+        }
     }  
     public void special(){
         if(kc >= 10){

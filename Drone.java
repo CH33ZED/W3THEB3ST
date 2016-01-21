@@ -1,7 +1,7 @@
 public class Drone extends Ship{
     public Drone(){
 	   r = (int)(Math.random()*10);
-           c = 20;
+           c = 9;
            HP = 1;
            gun = "-";
            name = "Drone";
