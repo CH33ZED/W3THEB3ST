@@ -19,6 +19,7 @@ public class Damage extends Ship{
             if(r > 0){
                 r--;
             }
+        }
 	else{
             if(r < 9){
                 r++;
