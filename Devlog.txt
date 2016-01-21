@@ -1,0 +1,34 @@
+DEVLOG
+Create GoFish and SpaceInvaders
+GF = GoFish
+SI = Space Invaders
+January 14
+Started with abstract class Ship.java SI
+Started with abstract class Player.java GF
+
+
+January 15
+Worked on Ship.java and started templates for other classes Damage, Agility and Tank.	SI
+Started with abstract class Player.java GF
+
+
+January 16
+Finished Damage.java	SI
+Created HumanPlayer and AI Player GF
+
+
+January 17-18 
+Finished the classes for the ship types SI
+Created main GoFish function Running into errors for the player files, cannot find certain methods GF
+
+January 19
+Started working on main game initialization file	SI
+
+January 20
+Finished main file, wrong file uploaded to Github	SI
+Fixed errors ran into more GF
+
+January 21
+Updated Github files with corrections and running SpaceInvader.java file.	SI
+
+Still fixing errors with methods GF
