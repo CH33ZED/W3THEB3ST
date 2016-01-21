@@ -18,6 +18,7 @@ public class Agility extends Ship{
             if(r > 0){
                 r--;
             }
+        }
 	else{
             if(r < 9){
                 r++;
