@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Spaceinvader{
     public static int score;
-    public static int time;
+    public static double time;
     public static int type;
     public static String mv;
     public static Ship hero;
@@ -35,16 +35,15 @@ public class Spaceinvader{
         }
         z[hero.r][hero.c] = hero.toString();
         printS();
-        time = 30;
-        while(time > 0){
+        time = System.currentTimeMillis();
+        while(currentTimeMillis() - time < 1000000000){
             System.out.println();
             System.out.println("move!");
             mv = Keyboard.readString();
             set(hero.r,hero.c,"-----");
             hero.setMove(mv);
             set(hero.r,hero.c,hero.toString());
-	    printS();
-            time--;
+	    printS();;
 	}
     }
 }
