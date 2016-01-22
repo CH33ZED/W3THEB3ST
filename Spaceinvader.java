@@ -36,7 +36,7 @@ public class Spaceinvader{
         z[hero.r][hero.c] = hero.toString();
         printS();
         time = System.currentTimeMillis();
-        while(System.currentTimeMillis() - time < 1000000000){
+        while(System.currentTimeMillis() - time < 45000){
             System.out.println();
             System.out.println("move!");
             mv = Keyboard.readString();
