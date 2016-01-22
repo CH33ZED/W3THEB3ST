@@ -24,7 +24,15 @@ public class Spaceinvader{
         System.out.println("1.Tank         2.Damage        3.Agility");      
         type = Keyboard.readInt();
         System.out.println("Good Choice! Get Ready for battle");
-        hero = new Damage();
+        if (type == 1){
+            hero = new Tank();
+        }
+        else if (type == 2){
+            hero = new Damage();
+        }
+        else{
+            hero = new Agility();
+        }
         z[hero.r][hero.c] = hero.toString();
         printS();
         time = 30;
