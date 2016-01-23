@@ -11,7 +11,7 @@ public class Agility extends Ship{
            dead = false;
     }
     public String toString(){
-        return "---=}";
+        return "~" + HP + "}" + gun;
     }
     public void setMove(String a){
         if(a.equals("w")){
@@ -44,7 +44,7 @@ public class Agility extends Ship{
         gun = a;
     }
     public void setHP(int a){
-        HP += a;
+        HP = a;
         if (HP >= 10){
             HP = 9;
         }

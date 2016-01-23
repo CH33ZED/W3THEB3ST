@@ -11,7 +11,7 @@ public class Tank extends Ship{
            dead = false;
     }
     public String toString(){
-        return "}" + HP + "]" + gun;
+        return "}]---";
     }
     public void setMove(String a){
         if(a.equals("w")){
@@ -19,10 +19,12 @@ public class Tank extends Ship{
                 r--;
             }
         }
-	else{
+        if(a.equals("s")){
             if(r < 9){
                 r++;
             }
+	}
+	else{
         }
     }
     public void fire(){
@@ -44,7 +46,7 @@ public class Tank extends Ship{
         gun = a;
     }
     public void setHP(int a){
-        HP = a;
+        HP += a;
         if (HP >= 10){
             HP = 9;
         }

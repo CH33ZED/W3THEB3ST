@@ -73,12 +73,12 @@ public class Spaceinvader{
                 }  
             }
             for(int a = 0; a < 9; a++){
-                for(int b = 2; b < 9; b++){
-                    if(z[a][b] instanceof Drone && (z[a][b-2].name).equals(hero.name)){
-			z[a][b-1].die();
+                for(int b = 0; b < 9; b++){
+                    if(z[a][b] instanceof Drone && z[a][b-1].name == hero.name){
+			z[a][b-a].die();
                         hero.setHP(-1);
 		    }
-                    if(z[a][b] instanceof Powerup && (z[a][b-2].name).equals(hero.name)){ 
+                    if(z[a][b] instanceof Powerup && z[a][b-1].name == hero.name){ 
                         if((z[a][b].gun).equals("[>=>]")){
                             hero.nuke = true;
                         }
@@ -91,20 +91,11 @@ public class Spaceinvader{
                     }                        
                 }  
             }
-            System.out.println();
-            System.out.println();
-            System.out.println("HEALTH: " + hero.HP + "           SCORE: " + hero.kc + "            TIME: " + (45 - ((int)((System.currentTimeMillis() - time)/1000))));
 	    printS();;
-            if(hero.HP <= 0){
-		System.out.println();
-                System.out.println();
-                System.out.println("TERMINATED!");
-                break;
-            }
 	}
         System.out.println();
         System.out.println();
-        System.out.println("YOU LOST");
+        System.out.println("TIMES UP!");
     }
 }
         

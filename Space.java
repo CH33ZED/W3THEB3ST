@@ -1,41 +1,32 @@
-public class Drone extends Ship{
-    public Drone(){
-	   r = (int)(Math.random()*10);
-           c = 9;
-           HP = 1;
-           gun = "-";
-           name = "Drone";
+public class Space extends Ship{
+    public Space(){
+	   r = 0;
+           c = 0;
+           HP = 0;
+           gun = "-----";
+           name = "Space";
            nuke = false;
            hit = false;
+           ammo = 0;
            kc = 0;
            dead = false;
     }
     public String toString(){
-        return "<----";
+        return gun;
     }
     public void setMove(String a){
-        if(c > 1){
-	   c--;
-           r = (int)(Math.random()*10);
-        }
-        else{
-	   this.die();
-	}
     }
     public void fire(){
     }
-    
     public void upgrade(int a){
     }
     public void setGun(String a){
+	   gun = a;
     }
     public void setHP(int a){
-	 HP += a;
     }  
     public void special(){
     }
     public void die(){
-         name = "X----";
-         dead = true;
     }                         
 }
