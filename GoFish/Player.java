@@ -83,7 +83,7 @@ public class Player {
                 //If it isn't, search hand for a card with the same face
                 //value as the one requested.  If found, return it.
                 for(int i = 0; i < cards.length; i++) {
-                        if(cards[i] % 0x10 == cardFace) {
+                        if(cards[i] % 16 == cardFace) {
                                 return myHand.playACard(i);
                         }
                 }
@@ -165,13 +165,13 @@ public class Player {
         //Cards currently in users hand
         private void showHand() {
                 System.out.println("---------------");
-                String[] cardStrings = myHand.getHandStrings();
+                String[] cardNames = myHand.getHandStrings();
                 //Iterates through the cards and prints.
-                if(cardStrings == null) {
+                if(cardNames == null) {
                         System.out.println("No Cards");
                 } else {
-                        for(int c = 0; c < cardStrings.length; c++) {
-                                System.out.println(cardStrings[c]);
+                        for(int c = 0; c < cardNames.length; c++) {
+                                System.out.println(cardNames[c]);
                         }
                 }
                 System.out.println("---------------");
