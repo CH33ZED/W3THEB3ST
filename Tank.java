@@ -9,6 +9,7 @@ public class Tank extends Ship{
            hit = false;
            kc = 0;
            dead = false;
+           ammo = 0;
     }
     public String toString(){
         return "}]---";
@@ -27,17 +28,25 @@ public class Tank extends Ship{
 	else{
         }
     }
-    public void fire(){
-        /*
-        if (gun.equals(")="){
-	      bullet a = bullet(r,c+1,2);
-	}
-	else{
-	    if(ammo % 3 == 0){
-	      bullet a = bullet(r,c+1,2);
+    public int fire(){
+	if(nuke == true){
+            return 10;
+        }
+        else{
+            if (gun.equals(")=")){
+                 return 2;
+	    }
+ 	    else{
+	         if(ammo == 3){;
+                     ammo = 0;
+                     return 2;
+                 }
+                 else{
+                     ammo++;;
+                     return 0;
+                 }
             }
         }
-        */     	  
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -58,7 +67,7 @@ public class Tank extends Ship{
         }
     }
     public void die(){
-         name = "&&&";
+         name = "&&&&&";
          dead = true;
     }                         
 }

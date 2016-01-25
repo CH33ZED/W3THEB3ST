@@ -30,7 +30,8 @@ public class Powerup extends Ship{
             this.die();
         }
     }
-    public void fire(){
+    public int fire(){;
+        return 0;
     }
 
     public void upgrade(int a){

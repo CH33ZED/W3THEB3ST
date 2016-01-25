@@ -9,9 +9,10 @@ public class Agility extends Ship{
            hit = false;
            kc = 0;
            dead = false;
+           ammo = 0;
     }
     public String toString(){
-        return "~" + HP + "}" + gun;
+        return "---=}";
     }
     public void setMove(String a){
         if(a.equals("w")){
@@ -28,14 +29,18 @@ public class Agility extends Ship{
         }
     }
     public void fire(){
-        /*
-        if (gun.equals(")="){
-	      bullet a = bullet(r,c+1,2);
-	}
-	else{
-	      bullet a = bullet(r,c+1, 1);
-        }     	  
-        */
+        if(nuke == true){
+            bullet a = bullet(r,c+1,10);
+            nuke = false;
+        }
+        else{
+           if (gun.equals(")="){
+	         bullet a = bullet(r,c+1,2);
+	   }
+	   else{
+	         bullet a = bullet(r,c+1, 1);
+           }
+	}     	  
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -44,7 +49,7 @@ public class Agility extends Ship{
         gun = a;
     }
     public void setHP(int a){
-        HP = a;
+        HP += a;
         if (HP >= 10){
             HP = 9;
         }
@@ -55,7 +60,7 @@ public class Agility extends Ship{
         }
     }
     public void die(){
-         name = "&&&";
+         name = "&&&&&";
          dead = true;
     }                         
 }

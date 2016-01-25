@@ -28,18 +28,25 @@ public class Damage extends Ship{
 	else{
         }
     }
-    public void fire(){
-	/*
-        if (gun.equals(")="){
-	      bullet a = bullet(4);
-	}
-	else{
-	    if(ammo % 2 == 0){
-	      bullet a = bullet(2);
-            }
+    public int fire(){
+        if(nuke == true){
+            return 10;
         }
-	ammo++;
-        */     	  
+        else{
+            if (gun.equals(")=")){
+                    return 4;
+	    }
+	    else{
+	        if(ammo == 1){
+                    ammo = 0;
+                    return 2;
+                }
+                else{
+		    ammo++;
+                    return 0;
+                }
+            }
+	}
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -60,7 +67,7 @@ public class Damage extends Ship{
         }
     }
     public void die(){
-         name = "&&&";
+         name = "&&&&&";
          dead = true;
     }                         
 }

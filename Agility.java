@@ -9,6 +9,7 @@ public class Agility extends Ship{
            hit = false;
            kc = 0;
            dead = false;
+           ammo = 0;
     }
     public String toString(){
         return "---=}";
@@ -27,15 +28,18 @@ public class Agility extends Ship{
 	else{
         }
     }
-    public void fire(){
-        /*
-        if (gun.equals(")="){
-	      bullet a = bullet(r,c+1,2);
-	}
-	else{
-	      bullet a = bullet(r,c+1, 1);
-        }     	  
-        */
+    public int fire(){
+        if(nuke == true){
+            return 10;
+        }
+        else{
+	   if (gun.equals(")=")){
+                 return 2;
+	   }
+	   else{
+                 return 1;
+           }
+	}     	  
     }
     public void upgrade(int a){
         setHP(HP + a);
@@ -55,7 +59,7 @@ public class Agility extends Ship{
         }
     }
     public void die(){
-         name = "&&&";
+         name = "&&&&&";
          dead = true;
     }                         
 }

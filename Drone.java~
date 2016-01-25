@@ -11,7 +11,7 @@ public class Drone extends Ship{
            dead = false;
     }
     public String toString(){
-        return "--<--";
+        return "<----";
     }
     public void setMove(String a){
         if(c > 1){
@@ -35,7 +35,7 @@ public class Drone extends Ship{
     public void special(){
     }
     public void die(){
-         name = "--X--";
+         name = "X----";
          dead = true;
     }                         
 }
