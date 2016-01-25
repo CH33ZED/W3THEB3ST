@@ -1,3 +1,6 @@
+//all subclass method descritpions are in superclass ship
+//space taker basic ship type
+
 public class Space extends Ship{
     public Space(String a){
 	   r = 0;
