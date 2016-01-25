@@ -31,4 +31,10 @@ Fixed errors ran into more GF
 January 21
 Updated Github files with corrections and running SpaceInvader.java file.	SI
 
+January 23-24
+Complete basic draft for space invaders, no bullets
+
+January 24
+Bullets added, score, nuke, added to Spaceinvader.java, modifications made to all classes, bug fixes, through testing, complete!
+
 Still fixing errors with methods GF
