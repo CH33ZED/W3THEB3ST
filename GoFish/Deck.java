@@ -33,7 +33,7 @@ public class Deck {
         }
         
         // Was going to have Jokers but then decided not to however this does generate the deck
-        static Card[] generateDeck(int numJokers) {
+        static Card[] generateDeck(int numCards) {
                 
                 //Create the array, fill it with every possible combination of
                 //suit and face.
