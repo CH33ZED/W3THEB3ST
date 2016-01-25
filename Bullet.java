@@ -1,3 +1,6 @@
+//all subclass method descritpions are in superclass ship
+//hero projectile type
+
 public class Bullet extends Ship{
     public Bullet(int x, int y, int num){
            r = x;
