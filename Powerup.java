@@ -1,16 +1,19 @@
+//all subclass method descritpions are in superclass ship
+//hero-use-able powerups
+
 public class Powerup extends Ship{
     public Powerup(){
 	   r = (int)(Math.random() * 10);
            c = 9;
            HP = 1;
            if(r == 0){
-	       gun = "[>=>]";
+	       gun = "[>=>]";          // 1/9 chance to get a nuke
            }
            else if(r > 0 && r < 5) {
-	       gun = "[+]--";
+	       gun = "[+]--";          // 4/9 chance to get a medkit
 	   }
 	   else{
-               gun = "[)=]-";
+               gun = "[)=]-";          // 4/9 chance to get a twin cannon
            } 
            name = "Powerup";
            nuke = false;
