@@ -1,5 +1,5 @@
 /*
-A Game of GoFish
+A game of the fun card game go fish
 Rules: Each player receives 7 cards from a standard 52 Card Deck
 Each player gets points for each pair they have not book(4 cards)
 A player does go again if they get a pair from another player 
@@ -14,7 +14,7 @@ static String PlayerTwo = "Player Two";
 
 //Play a game of Gofish
 public static void main(String[] args) {
- String playerOneName = PlayerOne;       //Initizalizes Player names
+ String playerOneName = PlayerOne;       //Initizalizes Player names in command line
         try {
               playerOneName = args[0];
                 } catch (ArrayIndexOutOfBoundsException e){
