@@ -95,7 +95,7 @@ public static void main(String[] args) {
         }
 
 }
-// Received Dhruba's Brother help for some parts  Card, Deck and Pile.
+// Received Dhruba's Brother (Stony Brook Compsci Major) help for some parts  Card, Deck and Pile.
 // He had an initial Card Game program for Poker which had Card, Pile and Deck
 //which I modified and then used as a basis for the game
 //I modified those and created GoFish Player and Hand
