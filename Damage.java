@@ -1,3 +1,6 @@
+//all subclass method descritpions are in superclass ship
+//hero-use-able ship type, focus on damage
+
 public class Damage extends Ship{
     public Damage(){
 	   r = 4;
@@ -62,7 +65,7 @@ public class Damage extends Ship{
             HP = 9;
         }
     }  
-    public void special(){
+    public void special(){     //get a free nuke for every 10 kills
         if(kc >= 10){
                nuke = true;
                kc -= 10;
