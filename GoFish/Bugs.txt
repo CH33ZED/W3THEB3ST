@@ -1,0 +1,5 @@
+Known Bugs-
+1)May be a bit laggy
+2) Terminal may be a bit messy from all the text but tried to seperate with tilda lines and/or lines
+3) Player may get many cards of same suit
+4) Must have two players (not really a bug)
