@@ -1,3 +1,6 @@
+//all subclass method descritpions are in superclass ship
+//hero-use-able ship type
+
 public class Agility extends Ship{
     public Agility(){
            r = 4;
@@ -64,7 +67,7 @@ public class Agility extends Ship{
         }
     }  
     public void special(){
-        if(((int)(Math.random()*2))== 0){
+        if(((int)(Math.random()*2))== 0){       //50% chance to dodge enemies
                hit = false;
         }
     }
