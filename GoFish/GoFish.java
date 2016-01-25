@@ -1,5 +1,5 @@
 /*
-A game of the fun card game go fish
+A Game of GoFish
 Rules: Each player receives 7 cards from a standard 52 Card Deck
 Each player gets points for each pair they have not book(4 cards)
 A player does go again if they get a pair from another player 
@@ -11,12 +11,12 @@ public class GoFish {
 
         static String PlayerOne = "Dhruba"; //Pick who will be Dhruba
         static String PlayerTwo = "Ziyan"; //Pick who will be Ziyan
-
-//Play a game of Gofish
-public static void main(String[] args) {
- String playerOneName = PlayerOne;       //Initizalizes Player names in command line
-        try {
-              playerOneName = args[0];
+        
+        //Play a game of Gofish
+        public static void main(String[] args) {
+                String playerOneName = PlayerOne;       //Initizalizes Player names
+                try {
+                        playerOneName = args[0];
                 } catch (ArrayIndexOutOfBoundsException e){
                         
                 }
@@ -32,8 +32,8 @@ public static void main(String[] args) {
                 Pile deck = new Pile(Deck.generateDeck());
                 deck.shuffle();
                 
-                Pile PlayerOneDiscard = new Pile();
-                Pile PlayerTwoDiscard = new Pile();
+                Pile PlayerOnePairs = new Pile();
+                Pile PlayerTwoPairs = new Pile();
 
                 Hand playerOneHand = new Hand();
                 Hand playerTwoHand = new Hand();
@@ -43,8 +43,8 @@ public static void main(String[] args) {
                         playerTwoHand.receiveACard(deck.takeTopCard());
                 }
 
-                Player playerOne = new Player(playerOneName, playerOneHand, deck, PlayerOneDiscard);
-                Player playerTwo = new Player(playerTwoName, playerTwoHand, deck, PlayerTwoDiscard);
+                Player playerOne = new Player(playerOneName, playerOneHand, deck, PlayerOnePairs);
+                Player playerTwo = new Player(playerTwoName, playerTwoHand, deck, PlayerTwoPairs);
                 
 
                 // Cannot hand Player running out of cards in their hand before they run out of cards in the deck
@@ -54,21 +54,21 @@ public static void main(String[] args) {
                         if(deck.getCardCount() == 0 && !playerOne.hasCards() && !playerTwo.hasCards() ) {
                                 break;
                         }
-                        printGameInfo(deck, PlayerOneDiscard, PlayerTwoDiscard, playerOneHand, playerTwoHand);
+                        printGameInfo(deck, PlayerOnePairs, PlayerTwoPairs, playerOneHand, playerTwoHand);
                         doTurn(playerTwo, playerOne);
                         if(deck.getCardCount() == 0 && !playerOne.hasCards() && !playerTwo.hasCards() ) {
                                 break;
                         }
-                        printGameInfo(deck, PlayerOneDiscard, PlayerTwoDiscard, playerOneHand, playerTwoHand);
+                        printGameInfo(deck, PlayerOnePairs, PlayerTwoPairs, playerOneHand, playerTwoHand);
                 }
                 //Final score.
-                System.out.println("Final Score: " + PlayerOneDiscard.getCardCount() / 2 + " to " + PlayerTwoDiscard.getCardCount() / 2);       
+                System.out.println("Final Score: " + PlayerOnePairs.getCardCount() / 2 + " to " + PlayerTwoPairs.getCardCount() / 2);       
         }
         
         //Provides Score and amount of cards in deck and in hand every turn
-        private static void printGameInfo(Pile deck, Pile PlayerOneDiscard, Pile PlayerTwoDiscard, Hand playerOneHand, Hand playerTwoHand) {
+        private static void printGameInfo(Pile deck, Pile PlayerOnePairs, Pile PlayerTwoPairs, Hand playerOneHand, Hand playerTwoHand) {
                 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                System.out.println("Score: " + PlayerOneDiscard.getCardCount() / 2 + " to " + PlayerTwoDiscard.getCardCount() / 2);
+                System.out.println("Score: " + PlayerOnePairs.getCardCount() / 2 + " to " + PlayerTwoPairs.getCardCount() / 2);
                 System.out.println("Cards in deck: " + deck.getCardCount());
                 System.out.println("Cards in Hands: " + playerOneHand.getCardCount() + " and " + playerTwoHand.getCardCount());
                 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -95,7 +95,7 @@ public static void main(String[] args) {
         }
 
 }
-// Received Dhruba's Brother (Stony Brook Compsci Major) help for some parts  Card, Deck and Pile.
+// Received Dhruba's Brother help for some parts  Card, Deck and Pile.
 // He had an initial Card Game program for Poker which had Card, Pile and Deck
 //which I modified and then used as a basis for the game
 //I modified those and created GoFish Player and Hand
