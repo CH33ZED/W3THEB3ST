@@ -1,3 +1,6 @@
+//all subclass method descritpions are in superclass ship
+//hero-use-able ship type
+
 public class Tank extends Ship{
     public Tank(){
            r = 4;
@@ -62,7 +65,7 @@ public class Tank extends Ship{
             HP = 9;
         }
     }  
-    public void special(){
+    public void special(){                         //regains 1 health for every 10 kills
         if(kc >= 10){
                this.setHP(kc/10);
                kc %= 10;
