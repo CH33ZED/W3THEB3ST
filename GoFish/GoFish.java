@@ -9,8 +9,8 @@ The player with the most pairs wins in the end
 
 public class GoFish {
 
-static String PlayerOne = "Player One";
-static String PlayerTwo = "Player Two";
+        static String PlayerOne = "Dhruba"; //Pick who will be Dhruba
+        static String PlayerTwo = "Ziyan"; //Pick who will be Ziyan
 
 //Play a game of Gofish
 public static void main(String[] args) {
