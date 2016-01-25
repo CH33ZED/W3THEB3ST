@@ -7,7 +7,7 @@ public class Damage extends Ship{
            name = "Damage";
            nuke = false;
            hit = false;
-           ammo = 0;
+           ammo = 4;
            kc = 0;
            dead = false;
     }
@@ -30,14 +30,16 @@ public class Damage extends Ship{
     }
     public int fire(){
         if(nuke == true){
+            ammo = 0;
+            nuke = false;
             return 10;
         }
         else{
-            if (gun.equals(")=")){
+            if (gun.equals(")=") && ammo == 4){
                     return 4;
 	    }
 	    else{
-	        if(ammo == 1){
+	        if(ammo == 4){
                     ammo = 0;
                     return 2;
                 }

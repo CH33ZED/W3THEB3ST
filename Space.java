@@ -1,9 +1,9 @@
 public class Space extends Ship{
-    public Space(){
+    public Space(String a){
 	   r = 0;
            c = 0;
            HP = 0;
-           gun = "-----";
+           gun = a;
            name = "Space";
            nuke = false;
            hit = false;
@@ -16,7 +16,8 @@ public class Space extends Ship{
     }
     public void setMove(String a){
     }
-    public void fire(){
+    public int fire(){
+	   return 0;
     }
     public void upgrade(int a){
     }

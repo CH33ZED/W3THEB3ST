@@ -9,7 +9,7 @@ public class Tank extends Ship{
            hit = false;
            kc = 0;
            dead = false;
-           ammo = 0;
+           ammo = 4;
     }
     public String toString(){
         return "}]---";
@@ -30,14 +30,16 @@ public class Tank extends Ship{
     }
     public int fire(){
 	if(nuke == true){
+            nuke = false;
+            ammo = 0;
             return 10;
         }
         else{
-            if (gun.equals(")=")){
+            if (gun.equals(")=") && ammo == 4){
                  return 2;
 	    }
  	    else{
-	         if(ammo == 3){;
+	         if(ammo == 4){;
                      ammo = 0;
                      return 2;
                  }

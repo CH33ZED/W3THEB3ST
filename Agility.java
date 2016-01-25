@@ -9,7 +9,7 @@ public class Agility extends Ship{
            hit = false;
            kc = 0;
            dead = false;
-           ammo = 0;
+           ammo = 3;
     }
     public String toString(){
         return "---=}";
@@ -30,14 +30,24 @@ public class Agility extends Ship{
     }
     public int fire(){
         if(nuke == true){
+            ammo = 0;
+            nuke = false;
             return 10;
         }
         else{
-	   if (gun.equals(")=")){
+	   if (gun.equals(")=") && ammo == 3){
+	         ammo = 0;
                  return 2;
 	   }
-	   else{
-                 return 1;
+	   else{ 
+               if(ammo == 3){
+		   ammo = 0;
+                   return 1;
+               }
+               else{
+	         ammo++;
+                 return 0;
+	       }
            }
 	}     	  
     }
