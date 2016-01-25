@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Spaceinvader{
     public static int score = 0;
     public static double time;
