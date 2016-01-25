@@ -1,3 +1,6 @@
+//all subclass method descritpions are in superclass ship
+//enemy ship type
+
 public class Drone extends Ship{
     public Drone(){
 	   r = (int)(Math.random()*10);
