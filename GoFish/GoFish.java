@@ -80,11 +80,11 @@ public class GoFish {
                         System.out.println(player.getName() + ": " + otherPlayer.getName() + " do you have a " + Card.getFaceString(ask) + "?");
                         Card reaction = otherPlayer.reaction(ask);
                         if(reaction == null) {
-                                System.out.println(otherPlayer.getName() + ": Go Fish!");
+                                System.out.println(otherPlayer.getName() + ": HA! Go Fish!");
                                 player.drawACard();
                                 return false;
                         } else {
-                                System.out.println(otherPlayer.getName() + ": Dang it! " + player.getName() + " I have one of those!");
+                                System.out.println(otherPlayer.getName() + ": Dang it! " + player.getName() + " I have one of those, HERE TAKE IT!");
                                 player.receiveACard(reaction);
                                 if(!player.hasCards()) {
                                         player.drawACard();
